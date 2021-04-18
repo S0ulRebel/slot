@@ -1,19 +1,5 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -24,15 +10,35 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App-header {
+  height: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.gameArea {
+  padding: 20px;
+  width: 100%;
+}
+
+.gameArea__reels {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: 1fr;
+  grid-gap: 20px;
+}
+
+.reel {
+  border: 1px solid white;
+  background-size: 100% auto;
+  background-position: 0 -85px;
+  overflow: hidden;
+  height: 100px;
+  position: relative;
+  width: 100px;
+}
+
+.reel img {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: auto;
 }
